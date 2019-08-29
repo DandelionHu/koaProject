@@ -6,9 +6,13 @@ const router=new Router()
 const user=require('./admin/user.js')
 const focus=require('./admin/focus.js')
 const news=require('./admin/news.js')
-
-router.get('/',(ctx)=>{
-    ctx.body="后台管理系统"
+/**
+ * @route GET admin/login
+ * @desc 登录接口
+ * @access 接口是公开的
+ */
+router.get('/login',async (ctx)=>{
+    ctx.body="登录接口"
 })
 //配置子路由
 router.use('/user',user)
